@@ -1,0 +1,6 @@
+spring:
+  main:
+    web-application-type: none # HTTP サーバは起動しない（Lambda 直実行）
+logging:
+  level:
+    root: INFO
