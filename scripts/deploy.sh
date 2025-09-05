@@ -1,14 +1,14 @@
 #!/bin/bash
 
+set -e
+
 # あらかじめawsへの認証を通しておく必要がある。
 
-ECR_REPO_URL=$(terraform output -raw ecr_repository_url)
 LAMBDA_FUNCTION_NAME=spring-cloud-function-demo
+ECR_REPO_URL=310682748446.dkr.ecr.ap-northeast-1.amazonaws.com/spring-cloud-function-demo-lambda
 
 # ECR にログイン
-aws ecr get-login-password --region ap-northeast-1 | \
-  docker login --username AWS \
-  --password-stdin $(terraform output -raw ecr_repository_url | cut -d'/' -f1)
+aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin $(echo $ECR_REPO_URL | cut -d'/' -f1)
 
 # イメージにタグ付け
 docker tag ${LAMBDA_FUNCTION_NAME}:latest ${ECR_REPO_URL}:latest

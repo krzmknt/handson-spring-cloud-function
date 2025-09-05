@@ -1,3 +1,4 @@
 {
-  "name": "Taro"
+  "headers": { "spring.cloud.function.definition": "greet" },
+  "payload": { "name": "Alice" }
 }

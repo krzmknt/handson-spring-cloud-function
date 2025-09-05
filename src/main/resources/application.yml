@@ -2,8 +2,11 @@ spring:
   application.startup: buffering
   main:
     web-application-type: none # HTTP サーバは起動しないため none に設定
+  cloud:
+    function:
+      definition: functionRouter # 常に Router を起動する
 logging:
   level:
     root: INFO
-    org.springframwework:
+    org.springframework:
       boot.startup: INFO

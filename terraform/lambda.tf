@@ -23,11 +23,10 @@ resource "aws_lambda_function" "spring_cloud_function" {
   }
 
   # Environment variables for Spring Cloud Function
-  environment {
-    variables = {
-      spring_cloud_function_definition = "greet"
-    }
-  }
+  # environment {
+  #   variables = {
+  #   }
+  # }
 
   depends_on = [
     aws_iam_role_policy_attachment.lambda_vpc_access,
