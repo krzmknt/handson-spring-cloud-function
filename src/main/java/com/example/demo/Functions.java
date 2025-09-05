@@ -9,9 +9,6 @@ import org.springframework.context.annotation.Configuration;
 import com.example.demo.dto.GreetRequest;
 import com.example.demo.dto.GreetResponse;
 
-/**
- *
- */
 @Configuration(proxyBeanMethods = false)
 public class Functions {
 

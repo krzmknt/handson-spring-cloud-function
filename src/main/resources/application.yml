@@ -5,6 +5,7 @@ spring:
   cloud:
     function:
       definition: functionRouter # 常に Router を起動する
+spring.cloud.function.routing-expression: pgmid
 logging:
   level:
     root: INFO

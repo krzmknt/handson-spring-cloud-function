@@ -3,7 +3,7 @@
 LAMBDA_FUNCTION_NAME="spring-cloud-function-demo"
 
 # 呼び出し
-aws lambda invoke --function-name $LAMBDA_FUNCTION_NAME --payload 'file://payload.json' response.json
+aws lambda invoke --function-name $LAMBDA_FUNCTION_NAME --payload 'fileb://scripts/payload.json' response.json
 
 
 # # 最新のログを確認

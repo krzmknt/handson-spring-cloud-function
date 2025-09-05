@@ -1,0 +1,4 @@
+{
+  "headers": { "spring.cloud.function.definition": "upper" },
+  "payload": "hello"
+}
