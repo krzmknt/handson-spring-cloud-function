@@ -1,18 +1,23 @@
 package com.example.demo;
 
-import com.example.demo.dto.GreetRequest;
-import com.example.demo.dto.GreetResponse;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
 import java.time.OffsetDateTime;
 import java.util.function.Function;
-//（SupplierやConsumerも同様に作れます）
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import com.example.demo.dto.GreetRequest;
+import com.example.demo.dto.GreetResponse;
 
+/**
+ *
+ */
 @Configuration(proxyBeanMethods = false)
 public class Functions {
 
-    // 入力: GreetRequest, 出力: GreetResponse の Function
+    /**
+     * 挨拶関数
+     *
+     * GreetRequestを受け取り、GreetResponseを返す
+     */
     @Bean
     public Function<GreetRequest, GreetResponse> greet() {
         return req -> {
@@ -21,7 +26,11 @@ public class Functions {
         };
     }
 
-    // ついでに String -> String のシンプルな関数例（切り替えて使える）
+    /**
+     * アッパーケース関数
+     *
+     * 文字列を大文字に変換する
+     */
     @Bean
     public Function<String, String> upper() {
         return s -> s == null ? "" : s.toUpperCase();

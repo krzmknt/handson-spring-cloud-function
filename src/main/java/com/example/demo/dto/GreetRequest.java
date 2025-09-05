@@ -9,9 +9,7 @@ package com.example.demo.dto;
  */
 public class GreetRequest {
 
-    /**
-     * The name of the person to greet.
-     */
+    /** The name of the person to greet. */
     private String name;
 
     /**

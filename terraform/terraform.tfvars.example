@@ -1,0 +1,8 @@
+# Copy this file to terraform.tfvars and customize as needed
+
+aws_region = "ap-northeast-1"
+project_name = "spring-cloud-function-demo"
+image_tag = "latest"
+lambda_function_name = "spring-cloud-function-demo"
+lambda_memory_size = 512
+lambda_timeout = 30

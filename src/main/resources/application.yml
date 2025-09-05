@@ -1,6 +1,9 @@
 spring:
+  application.startup: buffering
   main:
-    web-application-type: none # HTTP サーバは起動しない（Lambda 直実行）
+    web-application-type: none # HTTP サーバは起動しないため none に設定
 logging:
   level:
     root: INFO
+    org.springframwework:
+      boot.startup: INFO
